@@ -1,5 +1,4 @@
 import Head from "next/head"
-import Layout, { siteTitle } from "../components/layout"
 import utilStyles from "../styles/utils.module.css"
 import Link from "next/link"
 
@@ -16,9 +15,9 @@ export async function getStaticProps() {
 
 export default function Home({ allPostsData }) {
   return (
-    <Layout home>
+    <>
       <Head>
-        <title>{siteTitle}</title>
+        <title>Greg's Portfolio Site</title>
       </Head>
       <section className={utilStyles.headingMd}>
         <p>[Your Self Introduction]</p>
@@ -43,6 +42,6 @@ export default function Home({ allPostsData }) {
           ))}
         </ul>
       </section>
-    </Layout>
+    </>
   )
 }
