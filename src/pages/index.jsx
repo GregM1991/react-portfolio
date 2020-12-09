@@ -1,9 +1,9 @@
 import Head from "next/head"
 import utilStyles from "../styles/utils.module.css"
 import Link from "next/link"
-import Nav from "../components/Nav"
+import Nav from "components/Nav"
 
-import { getSortedPostsData } from "../lib/posts"
+import { getSortedPostsData } from "lib/posts"
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData()
@@ -19,7 +19,6 @@ const Home = ({ allPostsData }) => (
     <Head>
       <title>Greg's Portfolio Site</title>
     </Head>
-    <Nav />
     <section className={utilStyles.headingMd}>
       <p>[Your Self Introduction]</p>
       <p>
