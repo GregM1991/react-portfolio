@@ -16,5 +16,8 @@
     "remark": "^13.0.0",
     "remark-html": "^13.0.1",
     "styled-components": "^5.2.1"
+  },
+  "devDependencies": {
+    "babel-plugin-module-resolver": "^4.0.0"
   }
 }
