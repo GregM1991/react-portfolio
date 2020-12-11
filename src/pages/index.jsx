@@ -19,7 +19,6 @@ const Home = ({ allPostsData }) => (
     <Head>
       <title>Greg's Portfolio Site</title>
     </Head>
-    <Nav />
     <h1>Hello</h1>
   </>
 )
