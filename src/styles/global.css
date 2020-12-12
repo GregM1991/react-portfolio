@@ -18,3 +18,23 @@ body {
 a {
   text-decoration: none;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+h7 {
+  font-family: Arvo;
+}
+
+a {
+  color: #7bc7a4;
+  transition: all 0.2s ease-in-out;
+}
+
+a:hover {
+  color: #1b5452;
+  transform: scale(1.1);
+}

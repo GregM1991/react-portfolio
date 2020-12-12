@@ -30,12 +30,13 @@ const LinksContainer = styled.ul`
   flex: 1;
   padding-right: 60px;
   cursor: pointer;
-`
 
-const LinkWrapper = styled.li`
-  list-style: none;
-  font-size: 1.5rem;
-  font-weight: 900;
+  a {
+    list-style: none;
+    font-size: 1.5rem;
+    font-weight: 900;
+    padding: 0 15px;
+  }
 `
 
 const Nav = () => (
@@ -52,19 +53,13 @@ const Nav = () => (
 
     <LinksContainer>
       <Link href="/work">
-        <LinkWrapper>
-          <a>Work</a>
-        </LinkWrapper>
+        <a>Work</a>
       </Link>
       <Link href="/about">
-        <LinkWrapper>
-          <a>About</a>
-        </LinkWrapper>
+        <a>About</a>
       </Link>
       <Link href="blog">
-        <LinkWrapper>
-          <a>Blog</a>
-        </LinkWrapper>
+        <a>Blog</a>
       </Link>
     </LinksContainer>
   </NavContainer>
