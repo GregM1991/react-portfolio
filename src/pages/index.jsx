@@ -8,9 +8,8 @@ const IndexContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: calc(100vh - 100px);
   background-color: ${colours.primaryMain};
-  padding: 0 15% 10vh 15%;
   text-align: center;
 `
 
