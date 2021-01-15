@@ -2,6 +2,7 @@ import Head from "next/head"
 import styled from "styled-components"
 import { getSortedPostsData } from "lib/posts"
 import { colours } from "styles/colours"
+import SocialLinksContainer from "components/SocialLinksContainer"
 
 const IndexContainer = styled.div`
   display: flex;
@@ -14,8 +15,8 @@ const IndexContainer = styled.div`
 `
 
 const GregDisplayContainer = styled.h1`
-  font-size: 12rem;
-  line-height: 11rem;
+  font-size: 8rem;
+  line-height: 7.3rem;
   color: #fff;
 
   span {
@@ -25,13 +26,11 @@ const GregDisplayContainer = styled.h1`
 
 const Blurb = styled.p`
   color: ${colours.primaryLight};
-  font-size: 1.8rem;
-  line-height: 2.2rem;
+  font-size: 1.4rem;
+  line-height: 1.7rem;
   width: 550px;
-  padding: 20px 0;
+  padding: 15px 0;
 `
-
-const SocialLinkContainer = styled.div``
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData()
@@ -57,7 +56,7 @@ const Home = ({ allPostsData }) => (
         A Web Developer, standing in front of the internert, asking it to love
         him.
       </Blurb>
-      <SocialLinkContainer></SocialLinkContainer>
+      <SocialLinksContainer />
     </IndexContainer>
   </>
 )

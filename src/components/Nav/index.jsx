@@ -17,8 +17,8 @@ const LogoContainer = styled.div`
   display: flex;
   flex-direction: column;
   font-weight: 900;
-  font-size: 1.7em;
-  line-height: 44px;
+  font-size: 1.6em;
+  line-height: 40px;
   padding-left: 60px;
   flex: 2;
   cursor: pointer;
@@ -33,7 +33,7 @@ const LinksContainer = styled.ul`
 
   a {
     list-style: none;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 900;
     padding: 0 15px;
   }

@@ -16,7 +16,7 @@ const WorkContainer = styled.div`
   display: flex;
 `
 
-const Work = styled.div`
+const WorkBlock = styled.div`
   display: flex;
   flex-direction: column;
 `
@@ -26,9 +26,9 @@ const ImgContainer = styled.div``
 const Work = () => (
   <Container>
     <WorkContainer>
-      <Work>
+      <WorkBlock>
         <ImgContainer></ImgContainer>
-      </Work>
+      </WorkBlock>
     </WorkContainer>
   </Container>
 )
