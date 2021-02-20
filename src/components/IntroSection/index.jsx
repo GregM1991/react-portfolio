@@ -8,7 +8,7 @@ const GridWrapper = styled.section`
   grid-template-columns: repeat(12, 1fr);
   grid-auto-rows: minmax(min-content, max-content);
   gap: 0 10px;
-  margin-top: 100px;
+  margin-top: 50px;
   padding-bottom: 100px;
 `
 
@@ -36,13 +36,26 @@ const Blurb = styled.p`
 const ImgContainer = styled.div`
   grid-column: 2/-2;
   height: 300px;
-  margin-top: 150px;
+  margin-top: 50px;
 
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
+`
+
+const AboutCopy = styled.div`
+  grid-column: 2/-2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  font-weight: 400;
+  margin-top: 50px;
+
+  // p + p {
+  //   margin-left: 10px;
+  // }
 `
 
 const IntroSection = () => (
@@ -60,6 +73,18 @@ const IntroSection = () => (
         alt="A person who looks like me at this point in the development of this portfolio."
       />
     </ImgContainer>
+    <AboutCopy>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro ipsam,
+        eaque architecto qui autem quibusdam distinctio vel repudiandae
+        perferendis voluptatibus.
+      </p>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem esse
+        ullam vero veniam ratione dolorem quod, dolorum facere a itaque aliquid
+        neque iste veritatis voluptatem?
+      </p>
+    </AboutCopy>
   </GridWrapper>
 )
 

@@ -19,6 +19,7 @@ const LogoContainer = styled.div`
   flex-direction: column;
   font-weight: 700;
   font-size: 1.2em;
+  line-height: 1.3em;
   cursor: pointer;
 `
 
