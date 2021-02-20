@@ -57,7 +57,7 @@ const SkillsSection = () => (
       <i class="devicon-sass-original"></i>
       <i class="devicon-ruby-plain-wordmark"></i>
       <i class="devicon-rails-plain-wordmark"></i>
-      <i class="devicon-redux-original-wordmark"></i>
+      <i class="devicon-redux-original"></i>
     </TechLogoContainer>
   </GridWrapper>
 )
