@@ -4,6 +4,8 @@ import { colours } from "styles/colours"
 import Link from "next/link"
 
 const NavContainer = styled.nav`
+  grid-column: 1/13;
+  grid-row: 1/2;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -17,10 +19,10 @@ const LogoContainer = styled.div`
   display: flex;
   flex-direction: column;
   font-weight: 900;
-  font-size: 1.6em;
-  line-height: 40px;
+  font-size: 1.2em;
+  line-height: 30px;
   padding-left: 60px;
-  flex: 2;
+  flex: 3;
   cursor: pointer;
 `
 
@@ -57,9 +59,6 @@ const Nav = () => (
       </Link>
       <Link href="/about">
         <a>About</a>
-      </Link>
-      <Link href="blog">
-        <a>Blog</a>
       </Link>
     </LinksContainer>
   </NavContainer>

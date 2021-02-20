@@ -5,28 +5,26 @@ import { colours } from "styles/colours"
 import SocialLinksContainer from "components/SocialLinksContainer"
 
 const IndexContainer = styled.div`
+  grid-column: 1/13;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: calc(100vh - 100px);
-  background-color: ${colours.primaryMain};
-  text-align: center;
 `
 
 const GregDisplayContainer = styled.h1`
-  font-size: 8rem;
-  line-height: 7.3rem;
-  color: #fff;
+  grid-column: 3/9;
+  font-size: 4rem;
+  color: ${colours.primaryDark};
+  font-weight: 700;
 
   span {
-    color: ${colours.primaryLight};
+    color: ${colours.primaryDark};
   }
 `
 
 const Blurb = styled.p`
-  color: ${colours.primaryLight};
-  font-size: 1.4rem;
+  color: ${colours.primaryDark};
+  font-weight: 100;
+  font-size: 2rem;
   line-height: 1.7rem;
   width: 550px;
   padding: 15px 0;
@@ -47,11 +45,7 @@ const Home = ({ allPostsData }) => (
       <title>Greg's Portfolio Site</title>
     </Head>
     <IndexContainer>
-      <GregDisplayContainer>
-        GR
-        <br />
-        EG<span>.</span>
-      </GregDisplayContainer>
+      <GregDisplayContainer>Welcome</GregDisplayContainer>
       <Blurb>
         A Web Developer, standing in front of the internert, asking it to love
         him.
