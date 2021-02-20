@@ -20,12 +20,12 @@ const SocialLinksContainer = () => (
   <LinksContainer>
     <Link href="https://github.com/GregM1991" target="_blank">
       <a>
-        <i class="fab fa-github fa-1x"></i>
+        <i class="devicon-github-original"></i>
       </a>
     </Link>
     <Link href="https://twitter.com/I_Too_Code" target="_blank">
       <a>
-        <i class="fab fa-twitter fa-1x"></i>
+        <i class="devicon-twitter-original"></i>
       </a>
     </Link>
     <Link
@@ -33,7 +33,7 @@ const SocialLinksContainer = () => (
       target="_blank"
     >
       <a>
-        <i class="fab fa-linkedin fa-1x"></i>
+        <i class="devicon-linkedin-plain"></i>
       </a>
     </Link>
     <Link href="mailto:gregm31@live.com" target="_blank">
