@@ -8,7 +8,7 @@ const LinksContainer = styled.div`
   align-items: center;
 
   a {
-    color: ${colours.primaryDark};
+    color: ${colours.primaryMain};
   }
 
   a + a {

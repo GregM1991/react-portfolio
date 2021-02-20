@@ -13,7 +13,7 @@ const NavContainer = styled.nav`
 `
 
 const LogoContainer = styled.div`
-  grid-column: 3;
+  grid-column: 2;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -23,20 +23,20 @@ const LogoContainer = styled.div`
 `
 
 const LinksContainer = styled.ul`
-  grid-column: -3/-5;
+  grid-column: -2/-4;
   cursor: pointer;
-  margin: auto 0;
+  margin: auto 0 auto auto;
   font-family: "Raleway", serif;
 
   a {
     list-style: none;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: 100;
     color: ${colours.primaryDark};
   }
 
   a + a {
-    margin-left: 15px;
+    margin-left: 25px;
   }
 `
 
