@@ -29,6 +29,7 @@ const TechLogoContainer = styled.div`
   flex-flow: row wrap;
   justify-content: center;
   font-size: 48px;
+  text-align: center;
   padding: 20px;
 
   i {

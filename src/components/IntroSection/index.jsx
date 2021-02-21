@@ -52,10 +52,6 @@ const AboutCopy = styled.div`
   gap: 10px;
   font-weight: 400;
   margin-top: 50px;
-
-  // p + p {
-  //   margin-left: 10px;
-  // }
 `
 
 const IntroSection = () => (
