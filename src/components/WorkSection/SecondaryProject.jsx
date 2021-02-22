@@ -31,22 +31,24 @@ const MainHeader = styled.h3`
   font-weight: 400;
 `
 
-const SecondaryProject = ({ position, row }) => (
+const SecondaryProject = ({
+  position,
+  row,
+  backgroundImg,
+  title,
+  description,
+}) => (
   <>
     <ImgContainer position={position} row={row}>
       <img
-        src="https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2546&q=80"
+        src={backgroundImg}
         alt="A person who looks like me at this point in the development of this portfolio."
       />
     </ImgContainer>
     <PrimaryCopy position={position} row={row}>
-      <MainHeader>mArtketplace</MainHeader>
+      <MainHeader>{title}</MainHeader>
       <ProjectLinks project="mArtketplace" />
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae eius
-        fuga, fugit voluptatum a aliquid, ut explicabo ducimus aperiam, ratione
-        facilis laboriosam officia eveniet fugiat!
-      </p>
+      <p>{description}</p>
     </PrimaryCopy>
   </>
 )
