@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import styled from "styled-components"
 import axios from "axios"
+import { colours } from "styles/colours"
 
 const GridWrapper = styled.section`
   display: grid;
@@ -8,10 +9,41 @@ const GridWrapper = styled.section`
   grid-auto-rows: minmax(min-content, max-content);
   gap: 0 10px;
   padding: 50px 0;
+  background-color: ${colours.primaryDark};
 `
 
 const FormContainer = styled.form`
-  grid-column: 2/-2;
+  grid-column: 3/-3;
+  display: flex;
+  flex-direction: column;
+`
+
+const TopRow = styled.div`
+  display: flex;
+  align-items: center;
+`
+
+const InputWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+  flex: 1;
+
+  input {
+    padding: 10px;
+    font-family: "Raleway", sans-serif;
+    font-size: 16px;
+  }
+
+  textarea {
+    padding: 10px;
+    font-family: "Raleway", sans-serif;
+    font-size: 16px;
+  }
+
+  & + & {
+    margin-left: 20px;
+  }
 `
 
 const ContactForm = () => {
@@ -74,29 +106,42 @@ const ContactForm = () => {
   return (
     <GridWrapper>
       <FormContainer onSubmit={handleOnSubmit}>
-        <label htmlFor="name">Email</label>
-        <input
-          type="text"
-          name="_replyto"
-          onChange={handleOnChange}
-          required
-          value={inputs.email}
-        />
-        <label htmlFor="email">Email</label>
-        <input
-          type="email"
-          name="_replyto"
-          onChange={handleOnChange}
-          required
-          value={inputs.email}
-        />
-        <label htmlFor="message">Message</label>
-        <textarea
-          name="message"
-          onChange={handleOnChange}
-          required
-          value={inputs.message}
-        />
+        <TopRow>
+          <InputWrapper>
+            <label htmlFor="name">Name</label>
+            <input
+              type="text"
+              name="_replyto"
+              onChange={handleOnChange}
+              required
+              value={inputs.email}
+              placeholder="Spongebob Squarepants"
+            />
+          </InputWrapper>
+          <InputWrapper>
+            <label htmlFor="email">Email</label>
+            <input
+              type="email"
+              name="_replyto"
+              onChange={handleOnChange}
+              required
+              value={inputs.email}
+              placeholder="spongebob@kahrahtaye.com"
+            />
+          </InputWrapper>
+        </TopRow>
+
+        <InputWrapper>
+          <label htmlFor="message">Message</label>
+          <textarea
+            name="message"
+            onChange={handleOnChange}
+            required
+            value={inputs.message}
+            placeholder="HY-YAH"
+          />
+        </InputWrapper>
+
         <button type="submit" disabled={status.submitting}>
           {!status.submitting
             ? !status.submitted
