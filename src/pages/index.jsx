@@ -3,6 +3,7 @@ import { getSortedPostsData } from "lib/posts"
 import IntroSection from "components/IntroSection"
 import SkillsSection from "components/SkillsSection"
 import WorkSection from "components/WorkSection"
+import ContactForm from "components/ContactForm"
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData()
@@ -25,6 +26,7 @@ const Home = ({ allPostsData }) => (
     <IntroSection />
     <SkillsSection />
     <WorkSection />
+    <ContactForm />
   </>
 )
 
