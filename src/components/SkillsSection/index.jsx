@@ -16,11 +16,19 @@ const MainHeader = styled.h1`
   line-height: 48px;
   color: ${colours.primaryDark};
   font-weight: 700;
+
+  @media (min-width: 2000px) {
+    grid-column: 4/-4;
+  }
 `
 
 const Blurb = styled.p`
   grid-column: 2/-2;
   margin-top: 20px;
+
+  @media (min-width: 2000px) {
+    grid-column: 4/-4;
+  }
 `
 
 const TechLogoContainer = styled.div`
@@ -36,6 +44,10 @@ const TechLogoContainer = styled.div`
     color: ${colours.primaryMain} !important;
     width: 20%;
     padding: 20px 10px;
+  }
+
+  @media (min-width: 2000px) {
+    grid-column: 4/-4;
   }
 `
 

@@ -9,12 +9,12 @@ const GridWrapper = styled.section`
   grid-auto-rows: minmax(min-content, max-content);
   gap: 0 10px;
   padding: 50px 0;
-  background-color: ${colours.primaryDark};
+  background-color: ${colours.primaryMain};
   color: #fff;
 `
 
 const FormContainer = styled.form`
-  grid-column: 4/-4;
+  grid-column: 2/7;
   display: flex;
   flex-direction: column;
 
@@ -33,11 +33,14 @@ const FormContainer = styled.form`
       transform: scale(0.98);
     }
   }
+
+  @media (min-width: 2000px) {
+    grid-column: 4/7;
+  }
 `
 
 const TopRow = styled.div`
   display: flex;
-  align-items: center;
 `
 
 const InputWrapper = styled.div`
@@ -45,6 +48,7 @@ const InputWrapper = styled.div`
   flex-direction: column;
   margin-top: 15px;
   flex: 1;
+  min-width: 0;
 
   input {
     padding: 10px;
@@ -77,10 +81,6 @@ const ErrorContainer = styled.div`
 `
 
 const ContactForm = () => {
-  useEffect(() => {
-    console.log(inputs)
-  })
-
   const [status, setStatus] = useState({
     submitted: false,
     submitting: false,
@@ -158,7 +158,7 @@ const ContactForm = () => {
               onChange={handleOnChange}
               required
               value={name}
-              placeholder="Spongebob Squarepants"
+              placeholder="Spongebob"
             />
           </InputWrapper>
           <InputWrapper>
@@ -170,7 +170,7 @@ const ContactForm = () => {
               onChange={handleOnChange}
               required
               value={email}
-              placeholder="spongebob@kahrahtaye.com"
+              placeholder="spongeb@kahrahtaye.com"
             />
           </InputWrapper>
         </TopRow>

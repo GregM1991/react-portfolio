@@ -14,6 +14,10 @@ const GridWrapper = styled.section`
 
 const GridChildPlacementWrapper = styled.div`
   grid-column: 2/-2;
+
+  @media (min-width: 2000px) {
+    grid-column: 4/-4;
+  }
 `
 
 const GregDisplayContainer = styled.h1`
@@ -23,10 +27,14 @@ const GregDisplayContainer = styled.h1`
   color: ${colours.primaryDark};
   font-weight: 700;
   letter-spacing: -2px;
+
+  @media (min-width: 2000px) {
+    grid-column: 4/-4;
+  }
 `
 
 const Blurb = styled.p`
-  grid-column: 2/9;
+  grid-column: 4/11;
   font-weight: 100;
   font-size: 2rem;
   line-height: 2rem;
@@ -43,6 +51,10 @@ const ImgContainer = styled.div`
     height: 100%;
     object-fit: cover;
   }
+
+  @media (min-width: 2000px) {
+    grid-column: 4/-4;
+  }
 `
 
 const AboutCopy = styled.div`
@@ -52,6 +64,10 @@ const AboutCopy = styled.div`
   gap: 10px;
   font-weight: 400;
   margin-top: 50px;
+
+  @media (min-width: 2000px) {
+    grid-column: 4/-4;
+  }
 `
 
 const IntroSection = () => (

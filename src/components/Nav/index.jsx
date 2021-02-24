@@ -13,7 +13,7 @@ const NavContainer = styled.nav`
 `
 
 const LogoContainer = styled.div`
-  grid-column: 2;
+  grid-column: 4;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -24,7 +24,7 @@ const LogoContainer = styled.div`
 `
 
 const LinksContainer = styled.ul`
-  grid-column: -2/-4;
+  grid-column: -4/-6;
   cursor: pointer;
   margin: auto 0 auto auto;
   font-family: "Raleway", serif;

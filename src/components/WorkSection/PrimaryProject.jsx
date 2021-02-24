@@ -9,6 +9,10 @@ const MainHeader = styled.h3`
   line-height: 48px;
   color: ${colours.primaryDark};
   font-weight: 700;
+
+  @media (min-width: 2000px) {
+    grid-column: 4/-4;
+  }
 `
 
 const ImgContainer = styled.div`
@@ -21,6 +25,10 @@ const ImgContainer = styled.div`
     height: 100%;
     object-fit: cover;
   }
+
+  @media (min-width: 2000px) {
+    grid-column: 4/-4;
+  }
 `
 
 const SecondaryHeader = styled.h1`
@@ -30,6 +38,10 @@ const SecondaryHeader = styled.h1`
   color: ${colours.primaryMain};
   font-weight: 400;
   margin-top: 50px;
+
+  @media (min-width: 2000px) {
+    grid-column: 4/-4;
+  }
 `
 
 const PrimaryDescription = styled.p`
@@ -37,6 +49,10 @@ const PrimaryDescription = styled.p`
   grid-row: 4;
   font-weight: 400;
   margin: 25px 0 50px;
+
+  @media (min-width: 2000px) {
+    grid-column: 4/-4;
+  }
 `
 
 const PrimaryProject = () => (
