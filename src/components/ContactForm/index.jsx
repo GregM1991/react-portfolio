@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import styled from "styled-components"
 import axios from "axios"
 import { colours } from "styles/colours"
@@ -72,16 +72,29 @@ const InputWrapper = styled.div`
   }
 `
 
+const ErrorContainer = styled.div`
+  grid-column: 4/-4;
+`
+
 const ContactForm = () => {
+  useEffect(() => {
+    console.log(inputs)
+  })
+
   const [status, setStatus] = useState({
     submitted: false,
     submitting: false,
     info: { error: false, msg: null },
   })
+
   const [inputs, setInputs] = useState({
+    name: "",
     email: "",
     message: "",
   })
+
+  const { name, email, message } = inputs
+
   const handleServerResponse = (ok, msg) => {
     if (ok) {
       setStatus({
@@ -90,6 +103,7 @@ const ContactForm = () => {
         info: { error: false, msg: msg },
       })
       setInputs({
+        name: "",
         email: "",
         message: "",
       })
@@ -99,18 +113,19 @@ const ContactForm = () => {
       })
     }
   }
+
   const handleOnChange = e => {
     e.persist()
-    setInputs(prev => ({
-      ...prev,
-      [e.target.id]: e.target.value,
-    }))
+    console.log(e)
+    setInputs({ ...inputs, [e.target.id]: e.target.value })
+
     setStatus({
       submitted: false,
       submitting: false,
       info: { error: false, msg: null },
     })
   }
+
   const handleOnSubmit = e => {
     e.preventDefault()
     setStatus(prevStatus => ({ ...prevStatus, submitting: true }))
@@ -129,6 +144,7 @@ const ContactForm = () => {
         handleServerResponse(false, error.response.data.error)
       })
   }
+
   return (
     <GridWrapper>
       <FormContainer onSubmit={handleOnSubmit}>
@@ -136,22 +152,24 @@ const ContactForm = () => {
           <InputWrapper>
             <label htmlFor="name">Name</label>
             <input
+              id="name"
               type="text"
-              name="_replyto"
+              name="name"
               onChange={handleOnChange}
               required
-              value={inputs.email}
+              value={name}
               placeholder="Spongebob Squarepants"
             />
           </InputWrapper>
           <InputWrapper>
             <label htmlFor="email">Email</label>
             <input
+              id="email"
               type="email"
               name="_replyto"
               onChange={handleOnChange}
               required
-              value={inputs.email}
+              value={email}
               placeholder="spongebob@kahrahtaye.com"
             />
           </InputWrapper>
@@ -160,10 +178,11 @@ const ContactForm = () => {
         <InputWrapper>
           <label htmlFor="message">Message</label>
           <textarea
+            id="message"
             name="message"
             onChange={handleOnChange}
             required
-            value={inputs.message}
+            value={message}
             placeholder="HY-YAH"
           />
         </InputWrapper>
@@ -176,10 +195,13 @@ const ContactForm = () => {
             : "Submitting..."}
         </button>
       </FormContainer>
+
       {status.info.error && (
-        <div className="error">Error: {status.info.msg}</div>
+        <ErrorContainer>
+          <div className="error">Error: {status.info.msg}</div>
+          {!status.info.error && status.info.msg && <p>{status.info.msg}</p>}
+        </ErrorContainer>
       )}
-      {!status.info.error && status.info.msg && <p>{status.info.msg}</p>}
     </GridWrapper>
   )
 }
