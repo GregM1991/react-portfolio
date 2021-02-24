@@ -34,6 +34,7 @@ const SecondaryHeader = styled.h1`
 
 const PrimaryDescription = styled.p`
   grid-column: 2/-2;
+  grid-row: 4;
   font-weight: 400;
   margin: 25px 0 50px;
 `

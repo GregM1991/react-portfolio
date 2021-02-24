@@ -10,12 +10,29 @@ const GridWrapper = styled.section`
   gap: 0 10px;
   padding: 50px 0;
   background-color: ${colours.primaryDark};
+  color: #fff;
 `
 
 const FormContainer = styled.form`
-  grid-column: 3/-3;
+  grid-column: 4/-4;
   display: flex;
   flex-direction: column;
+
+  button {
+    padding: 15px;
+    font-family: "Raleway", sans-serif;
+    font-size: 16px;
+    background-color: ${colours.primaryMain};
+    border: none;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:active {
+      transform: scale(0.98);
+    }
+  }
 `
 
 const TopRow = styled.div`
@@ -33,12 +50,21 @@ const InputWrapper = styled.div`
     padding: 10px;
     font-family: "Raleway", sans-serif;
     font-size: 16px;
+
+    &:focus {
+      outline: none;
+    }
   }
 
   textarea {
     padding: 10px;
     font-family: "Raleway", sans-serif;
     font-size: 16px;
+    margin-bottom: 30px;
+
+    &:focus {
+      outline: none;
+    }
   }
 
   & + & {

@@ -16,18 +16,20 @@ const WorkSection = () => (
     <PrimaryProject />
     <SecondaryProject
       position="left"
-      row="4"
+      row="6"
       backgroundImg="https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2546&q=80"
-      title="mArketplace"
+      title="mArtketplace"
+      project="mArtketplace"
       description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quisquam architecto molestias laborum est numquam officia obcaecati eaque quas rerum."
     />
-    <SecondaryProject
+    {/* <SecondaryProject
       position="right"
-      row="5"
+      row="7"
       backgroundImg="https://images.unsplash.com/photo-1579983093089-59686db09ac4?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=975&q=80"
       title="One more project here"
+      project="mArtketplace"
       description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quisquam architecto molestias laborum est numquam officia obcaecati eaque quas rerum."
-    />
+    /> */}
   </GridWrapper>
 )
 

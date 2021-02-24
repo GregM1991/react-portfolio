@@ -37,6 +37,7 @@ const SecondaryProject = ({
   backgroundImg,
   title,
   description,
+  project,
 }) => (
   <>
     <ImgContainer position={position} row={row}>
@@ -47,7 +48,7 @@ const SecondaryProject = ({
     </ImgContainer>
     <PrimaryCopy position={position} row={row}>
       <MainHeader>{title}</MainHeader>
-      <ProjectLinks project="mArtketplace" />
+      <ProjectLinks project={project} />
       <p>{description}</p>
     </PrimaryCopy>
   </>
