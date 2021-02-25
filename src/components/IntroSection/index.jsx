@@ -34,11 +34,15 @@ const GregDisplayContainer = styled.h1`
 `
 
 const Blurb = styled.p`
-  grid-column: 4/11;
+  grid-column: 2/7;
   font-weight: 100;
   font-size: 2rem;
   line-height: 2rem;
   margin-top: 20px;
+
+  @media (min-width: 2000px) {
+    grid-column: 4/11;
+  }
 `
 
 const ImgContainer = styled.div`

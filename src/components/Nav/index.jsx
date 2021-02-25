@@ -13,7 +13,7 @@ const NavContainer = styled.nav`
 `
 
 const LogoContainer = styled.div`
-  grid-column: 4;
+  grid-column: 2;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -21,10 +21,14 @@ const LogoContainer = styled.div`
   font-size: 1.2em;
   line-height: 1.3em;
   cursor: pointer;
+
+  @media (min-width: 2000px) {
+    grid-column: 4;
+  }
 `
 
 const LinksContainer = styled.ul`
-  grid-column: -4/-6;
+  grid-column: -2/-4;
   cursor: pointer;
   margin: auto 0 auto auto;
   font-family: "Raleway", serif;
@@ -38,6 +42,10 @@ const LinksContainer = styled.ul`
 
   a + a {
     margin-left: 25px;
+  }
+
+  @media (min-width: 2000px) {
+    grid-column: -4/-6;
   }
 `
 

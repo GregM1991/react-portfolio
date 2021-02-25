@@ -9,8 +9,13 @@ const GridWrapper = styled.section`
   grid-auto-rows: minmax(min-content, max-content);
   gap: 0 10px;
   padding: 50px 0;
-  background-color: ${colours.primaryMain};
+  background-color: #efefef;
   color: #fff;
+
+  h3 {
+    font-size: 22px;
+    color: ${colours.primaryDark};
+  }
 `
 
 const FormContainer = styled.form`
@@ -22,8 +27,11 @@ const FormContainer = styled.form`
     padding: 15px;
     font-family: "Raleway", sans-serif;
     font-size: 16px;
-    background-color: ${colours.primaryMain};
+    background-color: ${colours.primaryDark};
     border: none;
+    color: #fff;
+    transition: all 0.15s linear;
+    cursor: pointer;
 
     &:focus {
       outline: none;
@@ -31,6 +39,10 @@ const FormContainer = styled.form`
 
     &:active {
       transform: scale(0.98);
+    }
+
+    &:hover {
+      background-color: ${colours.primaryMain};
     }
   }
 
@@ -54,6 +66,8 @@ const InputWrapper = styled.div`
     padding: 10px;
     font-family: "Raleway", sans-serif;
     font-size: 16px;
+    border: none;
+    border-radius: 4px;
 
     &:focus {
       outline: none;
@@ -64,7 +78,9 @@ const InputWrapper = styled.div`
     padding: 10px;
     font-family: "Raleway", sans-serif;
     font-size: 16px;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 4px;
 
     &:focus {
       outline: none;
@@ -148,9 +164,9 @@ const ContactForm = () => {
   return (
     <GridWrapper>
       <FormContainer onSubmit={handleOnSubmit}>
+        <h3>Get in touch</h3>
         <TopRow>
           <InputWrapper>
-            <label htmlFor="name">Name</label>
             <input
               id="name"
               type="text"
@@ -158,11 +174,10 @@ const ContactForm = () => {
               onChange={handleOnChange}
               required
               value={name}
-              placeholder="Spongebob"
+              placeholder="Name"
             />
           </InputWrapper>
           <InputWrapper>
-            <label htmlFor="email">Email</label>
             <input
               id="email"
               type="email"
@@ -170,20 +185,19 @@ const ContactForm = () => {
               onChange={handleOnChange}
               required
               value={email}
-              placeholder="spongeb@kahrahtaye.com"
+              placeholder="Email"
             />
           </InputWrapper>
         </TopRow>
 
         <InputWrapper>
-          <label htmlFor="message">Message</label>
           <textarea
             id="message"
             name="message"
             onChange={handleOnChange}
             required
             value={message}
-            placeholder="HY-YAH"
+            placeholder="Message"
           />
         </InputWrapper>
 

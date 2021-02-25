@@ -14,6 +14,10 @@ const ImgContainer = styled.div`
     height: 100%;
     object-fit: cover;
   }
+
+  @media (min-width: 2000px) {
+    grid-column: ${props => (props.position === "right" ? "7/-2" : "4/7")};
+  }
 `
 
 const PrimaryCopy = styled.p`
@@ -22,6 +26,10 @@ const PrimaryCopy = styled.p`
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  @media (min-width: 2000px) {
+    grid-column: ${props => (props.position === "right" ? "4/6" : "8/-4")};
+  }
 `
 
 const MainHeader = styled.h3`
