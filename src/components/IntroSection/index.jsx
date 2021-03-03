@@ -100,22 +100,23 @@ const IntroSection = () => (
         building out sites and apps in code! <br /> <br />
         When I think about my journey into 0's and 1's land, I really have to
         laugh at myself. I've always been a visual person, I grew up wanting to
-        be an illustrator, then went on to study Graphic Design and ultimately
-        work as one, as well as Illustrating. The idea of coding was always
+        be an illustrator. I studied Graphic Design and Illustration and
+        ultimately went on to work in both fields. The idea of coding was always
         rather daunting, and I never expected myself to learn, let alone be
         working in the industry.
       </p>
       <p>
-        But after I purchased my first course on Udemy, on a slow month without
-        any clients, I was absolutely swallowed by it. I found it so wild that I
-        could create these user lovely user interfaces, and then access those ui
-        elements to make them interactive.
+        That being said, after I purchased my first course on Udemy on a slow
+        month without any clients, I was absolutely swallowed by Web
+        Development. I found it so wild that I could create these lovely user
+        interfaces, and then access those UI elements to make them interactive,
+        to come up with a wholly unique space.
         <br />
         <br />
         Ever since then I've been honing my skills and learning everything I can
-        get my grubby mits. I graduated Coder Acadamy with a Diploma of IT and
-        have been working with React (in Next JS) and Node as well as Elixir as
-        a Full Stack Developer.
+        get my grubby mits on. I graduated Coder Acadamy with a Diploma of IT
+        and have been working as a Full Stack Developer with React (in Next JS)
+        and Node.
       </p>
     </AboutCopy>
   </GridWrapper>

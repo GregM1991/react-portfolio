@@ -56,10 +56,10 @@ const SkillsSection = () => (
     <MainHeader>Skills</MainHeader>
     <Blurb>
       I haven't been long into the industry, just over a year of learning and
-      working as a professional. But in that year I've crammed a whole bunch of
+      working professionaly. But in that year I've crammed a whole bunch of
       things into my brain-space. I've never quite experienced such a thirst for
       knowledge as when I started learning to code. But now I know a little, I
-      realise there's a lot to learn, and I'm excited to learn it.
+      realise there's a lot more to learn, and I'm excited to learn it.
     </Blurb>
     <TechLogoContainer>
       <i class="devicon-html5-plain-wordmark"></i>
