@@ -1,6 +1,6 @@
-import React from "react"
-import styled from "styled-components"
-import { colours } from "styles/colours"
+import React from "react";
+import styled from "styled-components";
+import { colours } from "styles/colours";
 
 const GridWrapper = styled.section`
   display: grid;
@@ -8,7 +8,7 @@ const GridWrapper = styled.section`
   grid-auto-rows: minmax(min-content, max-content);
   gap: 0 10px;
   padding: 50px 0;
-`
+`;
 
 const MainHeader = styled.h1`
   grid-column: 2/-2;
@@ -16,12 +16,20 @@ const MainHeader = styled.h1`
   line-height: 48px;
   color: ${colours.primaryDark};
   font-weight: 700;
-`
+
+  @media (min-width: 2000px) {
+    grid-column: 4/-4;
+  }
+`;
 
 const Blurb = styled.p`
-  grid-column: 2/-2;
+  grid-column: 2/9;
   margin-top: 20px;
-`
+
+  @media (min-width: 2000px) {
+    grid-column: 4/10;
+  }
+`;
 
 const TechLogoContainer = styled.div`
   grid-column: 2/-2;
@@ -37,16 +45,21 @@ const TechLogoContainer = styled.div`
     width: 20%;
     padding: 20px 10px;
   }
-`
+
+  @media (min-width: 2000px) {
+    grid-column: 4/-4;
+  }
+`;
 
 const SkillsSection = () => (
   <GridWrapper>
     <MainHeader>Skills</MainHeader>
     <Blurb>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo
-      quaerat temporibus est! Minus iste officiis beatae in perspiciatis rerum
-      quos tenetur ut, cupiditate voluptas doloribus delectus voluptate
-      repellat? Cum, ipsa!
+      I haven't been long into the industry, just over a year of learning and
+      working as a professional. But in that year I've crammed a whole bunch of
+      things into my brain-space. I've never quite experienced such a thirst for
+      knowledge as when I started learning to code. But now I know a little, I
+      realise there's a lot to learn, and I'm excited to learn it.
     </Blurb>
     <TechLogoContainer>
       <i class="devicon-html5-plain-wordmark"></i>
@@ -61,6 +74,6 @@ const SkillsSection = () => (
       <i class="devicon-redux-original"></i>
     </TechLogoContainer>
   </GridWrapper>
-)
+);
 
-export default SkillsSection
+export default SkillsSection;

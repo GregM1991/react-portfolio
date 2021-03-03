@@ -21,6 +21,10 @@ const LogoContainer = styled.div`
   font-size: 1.2em;
   line-height: 1.3em;
   cursor: pointer;
+
+  @media (min-width: 2000px) {
+    grid-column: 4;
+  }
 `
 
 const LinksContainer = styled.ul`
@@ -38,6 +42,10 @@ const LinksContainer = styled.ul`
 
   a + a {
     margin-left: 25px;
+  }
+
+  @media (min-width: 2000px) {
+    grid-column: -4/-6;
   }
 `
 

@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import styled from "styled-components"
 import axios from "axios"
 import { colours } from "styles/colours"
@@ -9,12 +9,17 @@ const GridWrapper = styled.section`
   grid-auto-rows: minmax(min-content, max-content);
   gap: 0 10px;
   padding: 50px 0;
-  background-color: ${colours.primaryDark};
+  background-color: #efefef;
   color: #fff;
+
+  h3 {
+    font-size: 22px;
+    color: ${colours.primaryDark};
+  }
 `
 
 const FormContainer = styled.form`
-  grid-column: 4/-4;
+  grid-column: 2/7;
   display: flex;
   flex-direction: column;
 
@@ -22,8 +27,11 @@ const FormContainer = styled.form`
     padding: 15px;
     font-family: "Raleway", sans-serif;
     font-size: 16px;
-    background-color: ${colours.primaryMain};
+    background-color: ${colours.primaryDark};
     border: none;
+    color: #fff;
+    transition: all 0.15s linear;
+    cursor: pointer;
 
     &:focus {
       outline: none;
@@ -32,12 +40,19 @@ const FormContainer = styled.form`
     &:active {
       transform: scale(0.98);
     }
+
+    &:hover {
+      background-color: ${colours.primaryMain};
+    }
+  }
+
+  @media (min-width: 2000px) {
+    grid-column: 4/7;
   }
 `
 
 const TopRow = styled.div`
   display: flex;
-  align-items: center;
 `
 
 const InputWrapper = styled.div`
@@ -45,11 +60,14 @@ const InputWrapper = styled.div`
   flex-direction: column;
   margin-top: 15px;
   flex: 1;
+  min-width: 0;
 
   input {
     padding: 10px;
     font-family: "Raleway", sans-serif;
     font-size: 16px;
+    border: none;
+    border-radius: 4px;
 
     &:focus {
       outline: none;
@@ -60,7 +78,9 @@ const InputWrapper = styled.div`
     padding: 10px;
     font-family: "Raleway", sans-serif;
     font-size: 16px;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 4px;
 
     &:focus {
       outline: none;
@@ -72,16 +92,25 @@ const InputWrapper = styled.div`
   }
 `
 
+const ErrorContainer = styled.div`
+  grid-column: 4/-4;
+`
+
 const ContactForm = () => {
   const [status, setStatus] = useState({
     submitted: false,
     submitting: false,
     info: { error: false, msg: null },
   })
+
   const [inputs, setInputs] = useState({
+    name: "",
     email: "",
     message: "",
   })
+
+  const { name, email, message } = inputs
+
   const handleServerResponse = (ok, msg) => {
     if (ok) {
       setStatus({
@@ -90,6 +119,7 @@ const ContactForm = () => {
         info: { error: false, msg: msg },
       })
       setInputs({
+        name: "",
         email: "",
         message: "",
       })
@@ -99,18 +129,19 @@ const ContactForm = () => {
       })
     }
   }
+
   const handleOnChange = e => {
     e.persist()
-    setInputs(prev => ({
-      ...prev,
-      [e.target.id]: e.target.value,
-    }))
+    console.log(e)
+    setInputs({ ...inputs, [e.target.id]: e.target.value })
+
     setStatus({
       submitted: false,
       submitting: false,
       info: { error: false, msg: null },
     })
   }
+
   const handleOnSubmit = e => {
     e.preventDefault()
     setStatus(prevStatus => ({ ...prevStatus, submitting: true }))
@@ -129,42 +160,44 @@ const ContactForm = () => {
         handleServerResponse(false, error.response.data.error)
       })
   }
+
   return (
     <GridWrapper>
       <FormContainer onSubmit={handleOnSubmit}>
+        <h3>Get in touch</h3>
         <TopRow>
           <InputWrapper>
-            <label htmlFor="name">Name</label>
             <input
+              id="name"
               type="text"
-              name="_replyto"
+              name="name"
               onChange={handleOnChange}
               required
-              value={inputs.email}
-              placeholder="Spongebob Squarepants"
+              value={name}
+              placeholder="Name"
             />
           </InputWrapper>
           <InputWrapper>
-            <label htmlFor="email">Email</label>
             <input
+              id="email"
               type="email"
               name="_replyto"
               onChange={handleOnChange}
               required
-              value={inputs.email}
-              placeholder="spongebob@kahrahtaye.com"
+              value={email}
+              placeholder="Email"
             />
           </InputWrapper>
         </TopRow>
 
         <InputWrapper>
-          <label htmlFor="message">Message</label>
           <textarea
+            id="message"
             name="message"
             onChange={handleOnChange}
             required
-            value={inputs.message}
-            placeholder="HY-YAH"
+            value={message}
+            placeholder="Message"
           />
         </InputWrapper>
 
@@ -176,10 +209,13 @@ const ContactForm = () => {
             : "Submitting..."}
         </button>
       </FormContainer>
+
       {status.info.error && (
-        <div className="error">Error: {status.info.msg}</div>
+        <ErrorContainer>
+          <div className="error">Error: {status.info.msg}</div>
+          {!status.info.error && status.info.msg && <p>{status.info.msg}</p>}
+        </ErrorContainer>
       )}
-      {!status.info.error && status.info.msg && <p>{status.info.msg}</p>}
     </GridWrapper>
   )
 }

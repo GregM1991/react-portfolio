@@ -1,7 +1,7 @@
-import React from "react"
-import styled from "styled-components"
-import { colours } from "styles/colours"
-import SocialLinksContainer from "components/SocialLinksContainer"
+import React from "react";
+import styled from "styled-components";
+import { colours } from "styles/colours";
+import SocialLinksContainer from "components/SocialLinksContainer";
 
 const GridWrapper = styled.section`
   display: grid;
@@ -10,11 +10,15 @@ const GridWrapper = styled.section`
   gap: 0 10px;
   margin-top: 50px;
   padding-bottom: 100px;
-`
+`;
 
 const GridChildPlacementWrapper = styled.div`
   grid-column: 2/-2;
-`
+
+  @media (min-width: 2000px) {
+    grid-column: 4/-4;
+  }
+`;
 
 const GregDisplayContainer = styled.h1`
   grid-column: 2/-2;
@@ -23,15 +27,23 @@ const GregDisplayContainer = styled.h1`
   color: ${colours.primaryDark};
   font-weight: 700;
   letter-spacing: -2px;
-`
+
+  @media (min-width: 2000px) {
+    grid-column: 4/-4;
+  }
+`;
 
 const Blurb = styled.p`
-  grid-column: 2/9;
+  grid-column: 2/7;
   font-weight: 100;
   font-size: 2rem;
   line-height: 2rem;
   margin-top: 20px;
-`
+
+  @media (min-width: 2000px) {
+    grid-column: 4/11;
+  }
+`;
 
 const ImgContainer = styled.div`
   grid-column: 2/-2;
@@ -43,7 +55,11 @@ const ImgContainer = styled.div`
     height: 100%;
     object-fit: cover;
   }
-`
+
+  @media (min-width: 2000px) {
+    grid-column: 4/-4;
+  }
+`;
 
 const AboutCopy = styled.div`
   grid-column: 2/-2;
@@ -52,7 +68,15 @@ const AboutCopy = styled.div`
   gap: 10px;
   font-weight: 400;
   margin-top: 50px;
-`
+
+  strong {
+    color: ${colours.primaryDark};
+  }
+
+  @media (min-width: 2000px) {
+    grid-column: 4/-4;
+  }
+`;
 
 const IntroSection = () => (
   <GridWrapper>
@@ -71,17 +95,30 @@ const IntroSection = () => (
     </ImgContainer>
     <AboutCopy>
       <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro ipsam,
-        eaque architecto qui autem quibusdam distinctio vel repudiandae
-        perferendis voluptatibus.
+        <strong>Hello there!</strong> Welcome to Greg's place. I'm an
+        introverted chap (unless there's a few beers sunk into me) who loves
+        building out sites and apps in code! <br /> <br />
+        When I think about my journey into 0's and 1's land, I really have to
+        laugh at myself. I've always been a visual person, I grew up wanting to
+        be an illustrator, then went on to study Graphic Design and ultimately
+        work as one, as well as Illustrating. The idea of coding was always
+        rather daunting, and I never expected myself to learn, let alone be
+        working in the industry.
       </p>
       <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem esse
-        ullam vero veniam ratione dolorem quod, dolorum facere a itaque aliquid
-        neque iste veritatis voluptatem?
+        But after I purchased my first course on Udemy, on a slow month without
+        any clients, I was absolutely swallowed by it. I found it so wild that I
+        could create these user lovely user interfaces, and then access those ui
+        elements to make them interactive.
+        <br />
+        <br />
+        Ever since then I've been honing my skills and learning everything I can
+        get my grubby mits. I graduated Coder Acadamy with a Diploma of IT and
+        have been working with React (in Next JS) and Node as well as Elixir as
+        a Full Stack Developer.
       </p>
     </AboutCopy>
   </GridWrapper>
-)
+);
 
-export default IntroSection
+export default IntroSection;
