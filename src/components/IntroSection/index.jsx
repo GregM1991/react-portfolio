@@ -99,11 +99,11 @@ const IntroSection = () => (
         introverted chap (unless there's a few beers sunk into me) who loves
         building out sites and apps in code! <br /> <br />
         When I think about my journey into 0's and 1's land, I really have to
-        laugh at myself. I've always been a visual person, I grew up wanting to
-        be an illustrator. I studied Graphic Design and Illustration and
-        ultimately went on to work in both fields. The idea of coding was always
-        rather daunting, and I never expected myself to learn, let alone be
-        working in the industry.
+        laugh at myself. I've always been a visual person, I grew up drawing
+        comics and cartoons in my school books. I studied Graphic Design and
+        Illustration and ultimately went on to work in both fields. The idea of
+        coding was always rather daunting, and I never expected myself to learn,
+        let alone be working in the industry.
       </p>
       <p>
         That being said, after I purchased my first course on Udemy on a slow
