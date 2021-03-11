@@ -91,8 +91,13 @@ const IntroSection = () => (
     <ImgContainer>
       <img
         src="https://my-portfolio-bucket-51064.s3-ap-southeast-2.amazonaws.com/me-wide-2.jpg"
-        alt="A person who looks like me at this point in the development of this portfolio."
+        alt="A photo of me in a funky print shirt."
       />
+      {/* TODO: Display me when a button is clicked */}
+      {/* <img
+        src="https://my-portfolio-bucket-51064.s3-ap-southeast-2.amazonaws.com/me-gif.gif"
+        alt="A gif of how I really feel about the process of taking photos of myself"
+      /> */}
     </ImgContainer>
     <AboutCopy>
       <p>
