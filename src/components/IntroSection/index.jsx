@@ -47,13 +47,14 @@ const Blurb = styled.p`
 
 const ImgContainer = styled.div`
   grid-column: 2/-2;
-  height: 300px;
+  height: 400px;
   margin-top: 50px;
 
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: 10% 20%;
   }
 
   @media (min-width: 2000px) {
@@ -89,7 +90,7 @@ const IntroSection = () => (
     </Blurb>
     <ImgContainer>
       <img
-        src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80"
+        src="https://my-portfolio-bucket-51064.s3-ap-southeast-2.amazonaws.com/me-wide-2.jpg"
         alt="A person who looks like me at this point in the development of this portfolio."
       />
     </ImgContainer>
